@@ -1,9 +1,7 @@
 import axios, { AxiosInstance } from 'axios'
 
-const baseURL = typeof window !== 'undefined' ? `${window.location.origin}/api` : ''
-
 const instance: AxiosInstance = axios.create({
-	baseURL: baseURL as string
+	baseURL: process.env.NEXT_PUBLIC_API_BASE_URL as string
 })
 
 export default instance
