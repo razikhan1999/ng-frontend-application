@@ -5,8 +5,18 @@ import { useQuery } from '@tanstack/react-query';
 import QuestCard from '../../components/quest/QuestCard';
 import instance from '../requests/axios';
 
+
+/**
+ * Retrieves list of quests.
+ * @return {Promise<Quests>} A promise that resolves to the quests data.
+ */
 const getQuests = () => instance.get('/quests').then(({ data }) => data);
 
+/**
+ * Renders the QuestsPage component.
+ *
+ * @return {JSX.Element} The rendered QuestsPage component.
+ */
 const QuestsPage = () => {
 	const {
 		data: questData,

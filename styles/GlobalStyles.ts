@@ -1,9 +1,9 @@
-import { Cinzel, Inter } from 'next/font/google';
-import { DefaultTheme, createGlobalStyle } from 'styled-components';
+import { Cinzel, Inter } from 'next/font/google'
+import { DefaultTheme, createGlobalStyle } from 'styled-components'
 
-export const cinzel = Cinzel({ weight: '700', subsets: ['latin'] });
-export const interRegular = Inter({ weight: '400', subsets: ['latin'] });
-export const interBold = Inter({ weight: '700', subsets: ['latin'] });
+export const cinzel = Cinzel({ weight: '700', subsets: ['latin'] })
+export const interRegular = Inter({ weight: '400', subsets: ['latin'] })
+export const interBold = Inter({ weight: '700', subsets: ['latin'] })
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 	//========================================================================================================
@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
 	body {
 		background-color: ${({ theme }) => theme.colors.black};
-		background-image: url('assets/background.png');
+		background-image: url('/assets/background.png');
 		background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -54,6 +54,6 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 		font-family: ${interRegular.style.fontFamily};
 		font-weight: ${interRegular.style.fontWeight};
 	}
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

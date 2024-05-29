@@ -9,11 +9,22 @@ import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'next/navigation';
 import { Quest } from '@/components/quest/quest.type';
 
+/**
+ * Retrieves a quest by its ID.
+ *
+ * @param {string} id - The ID of the quest.
+ * @return {Promise<Quest>} A promise that resolves to the quest data.
+ */
 const getQuest = async (id: string): Promise<Quest> => {
   const { data } = await instance.get(`/quest?questSlug=${id}`);
   return data;
 };
 
+/**
+ * Renders the QuestDetailPage component.
+ *
+ * @return {JSX.Element} The rendered QuestDetailPage component.
+ */
 const QuestDetailPage = () => {
   const { id } = useParams() as { id: string };
 
