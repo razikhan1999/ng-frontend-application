@@ -32,6 +32,7 @@ export default function RootLayout({ children }: { children: any }) {
 						{children}
 					</ClientProviders>
 				</StyledComponentsRegistry>
+				{/* @ts-ignore */}
 				<SmokeEffect />
 			</body>
 		</html>
