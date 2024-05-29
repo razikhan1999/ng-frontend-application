@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import React from 'react';
-import MouseParticles  from 'react-mouse-particles'; 
+import MouseParticles from 'react-mouse-particles'
 
-const CustomMouseParticles = (props) => {
-  return <MouseParticles {...props} />;
-};
+const CustomMouseParticles = (props: any) => {
+	/* @ts-ignore */
+	return <MouseParticles {...props} />
+}
 
-export default CustomMouseParticles;
+export default CustomMouseParticles
