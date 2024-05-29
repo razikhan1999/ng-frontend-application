@@ -1,7 +1,9 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from 'axios'
+
+const baseURL = typeof window !== 'undefined' ? `${window.location.origin}/api` : ''
 
 const instance: AxiosInstance = axios.create({
-	baseURL: process.env.NEXT_PUBLIC_API_BASE_URL as string
-});
+	baseURL: baseURL as string
+})
 
-export default instance;
+export default instance
