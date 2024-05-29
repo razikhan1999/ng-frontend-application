@@ -6,6 +6,7 @@ import { FC } from 'react'
 import { FlexBox } from '../Flex'
 import {
 	Block,
+	ButtonBlock,
 	ButtonContainer,
 	ButtonWithTransparentBg,
 	ButtonWithoutTransparentBg,
@@ -25,14 +26,9 @@ import {
 	questImage,
 	solidityIcon,
 	swordIcon,
-	xpIcon,
-	ButtonBlock
+	xpIcon
 } from './components'
-import { Quest } from './quest.type'
-
-interface IQuestDetail {
-	quest: Quest
-}
+import { IQuestDetail, Quest } from './quest.type'
 
 /**
  * Renders the details of a quest.
@@ -46,31 +42,38 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 
 	return (
 		<QuestDetailContainer>
+			{/* Display the quest image or a default image if not provided */}
 			<QuestImage src={quest.cover ?? questImage} alt='Quest Image' />
+			{/* Container for the quest details */}
 			<QuestDetails>
 				<Row>
+					{/* Display the quest title */}
 					<QuestName>{quest.title}</QuestName>
 				</Row>
 				<Row>
 					<IconText>
+						{/* Display the quest language */}
 						<CapsulesSection>
 							<CapsulesIcon src={solidityIcon} alt='Solidity Icon' />
 							<CapsulesText>{quest.language.label}</CapsulesText>
 						</CapsulesSection>
+						{/* Display the quest difficulty using icons */}
 						<CapsulesSection>
-							{Array.from({ length: quest.difficulty }).map((ar, index) => (
+							{Array.from({ length: quest.difficulty }).map((_, index) => (
 								<CapsulesIcon key={index} src={swordIcon} alt='Sword Icon' />
 							))}
-							{Array.from({ length: 5 - quest.difficulty }).map((_ar, index) => (
+							{Array.from({ length: 5 - quest.difficulty }).map((_, index) => (
 								<CapsulesIcon key={index} src={'/knife.svg'} alt='Sword Icon' />
 							))}
 						</CapsulesSection>
 					</IconText>
 					<FlexBox>
+						{/* Display the gold reward */}
 						<GoldValue>
 							<img src={goldIcon} alt='Gold Icon' />
 							<span> {quest.rewards.gold}</span>
 						</GoldValue>
+						{/* Display the experience points */}
 						<XPContainer>
 							<img src={xpIcon} alt='XP Icon' />
 							<XPValue>{quest.rewards.expPoints}</XPValue>
@@ -78,18 +81,19 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 					</FlexBox>
 				</Row>
 			</QuestDetails>
+			{/* Display the quest description */}
 			<Block>{quest.description}</Block>
 			<ButtonBlock>
 				<ButtonContainer>
+					{/* Link to go back to the quests list */}
 					{/* @ts-ignore */}
 					<Link href={`/quests/`} passHref>
 						<ButtonWithTransparentBg>Go Back</ButtonWithTransparentBg>
 					</Link>
+					{/* Button to airdrop rewards to the guardian */}
 					<ButtonWithoutTransparentBg
-						/**
-						 * Update global jotai state
-						 */
 						onClick={() => {
+							// Update global Jotai state with new reward values
 							setReward({
 								...reward,
 								xp: reward.xp + quest.rewards.expPoints,

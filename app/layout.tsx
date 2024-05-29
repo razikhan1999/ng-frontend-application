@@ -1,3 +1,4 @@
+import SmokeEffect from '@/components/SmokeEffect'
 import AppBar from '@/components/app-bar/AppBar'
 import dynamic from 'next/dynamic'
 import { ClientProviders } from './providers'
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: any }) {
 						{children}
 					</ClientProviders>
 				</StyledComponentsRegistry>
+				<SmokeEffect />
 			</body>
 		</html>
 	)

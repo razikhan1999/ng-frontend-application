@@ -20,13 +20,13 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 	}
 
 	body {
-		font-family: ${cinzel.style.fontFamily};
-		background-color: ${({ theme }) => theme.colors.black};
-		background-image: url('/assets/background.png');
-		background-repeat: no-repeat;
+    background-color: ${({ theme }) => theme.colors.black};
+    background-image: url('assets/background.png');
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-	}
+    overflow: hidden;
+  }
 
 	h1,
 	h2,
