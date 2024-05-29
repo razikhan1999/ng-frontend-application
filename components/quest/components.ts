@@ -1,55 +1,60 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const questImage = '/assets/questImage.png';
-export const xpIcon = '/assets/exp.png';
-export const goldIcon = '/assets/gold.png';
-export const swordIcon = '/assets/sword.svg';
-export const solidityIcon = '/assets/solidity.svg';
+export const questImage = '/assets/questImage.png'
+export const xpIcon = '/assets/exp.png'
+export const goldIcon = '/assets/gold.png'
+export const swordIcon = '/assets/sword.svg'
+export const solidityIcon = '/assets/solidity.svg'
 
 export const QuestCardContainer = styled.div`
 	width: 550px;
 	cusrsor: pointer;
-	border: 1px solid;
+	border: 1px solid #212121;
 	border-radius: 8px;
 	overflow: hidden;
-	padding-bottom: 20px;
+	padding: 16px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
+	&:hover {
+		border-color: #40382c;
+	}
+`
 
 export const QuestDetailContainer = styled.div`
 	width: 800px;
 	cusrsor: pointer;
-	border: 1px solid black;
+	border: 1px solid #212121;
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
+	padding: 16px;
+	background-color: #080808;
+`
 
 export const QuestImage = styled.img`
 	width: 100%;
 	height: 150px;
-`;
+	object-fit: cover;
+`
 
 export const QuestDetails = styled.div`
-	padding: 1rem;
 	color: #fff;
-`;
+`
 
 export const QuestName = styled.h3`
 	font-size: 1.2rem;
 	margin: 0;
-`;
+`
 
 export const XPContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 0.5rem;
-`;
+`
 
 export const XPValue = styled.span`
 	font-weight: bold;
-`;
+`
 
 export const Row = styled.div`
 	display: flex;
@@ -57,58 +62,70 @@ export const Row = styled.div`
 	align-items: center;
 	margin-top: 0.5rem;
 	width: 100%;
-`;
+`
 
 export const IconText = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-`;
+`
 
 export const GoldValue = styled.span`
 	font-weight: bold;
 	display: flex;
 	align-items: center;
 	font-size: 14px;
-`;
+	gap: 4px;
+`
 
 export const CapsulesSection = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-  border: 1px solid white;
+  border: 1px solid #212121;
 	font-size: 14px;
   padding: 7px;
-  border-radius: 15px;
+  border-radius: 6px;
 }
-`;
+`
 
 export const CapsulesIcon = styled.img`
 	width: 20px;
 	height: 20px;
-`;
+`
 
 export const CapsulesText = styled.span`
 	font-weight: bold;
-`;
+`
 
 export const Block = styled.div`
-	margin: 5px 20px 40px 20px;
 	color: #7c7c7c;
-`;
+	font-family: Inter;
+	font-size: 14px;
+	line-height: 19px;
+	margin: 12px 0 55px 0;
+`
+export const ButtonBlock = styled.div`
+	color: #7c7c7c;
+	font-family: Inter;
+	font-size: 14px;
+	line-height: 19px;
+`
 
 export const ButtonContainer = styled.div`
 	display: flex;
 	gap: 10px;
 	justify-content: space-between;
-`;
+`
 
 export const ButtonWithTransparentBg = styled.button`
-	padding: 10px;
+	height: 42px;
+	width: 160px;
+	flex-shrink: 0;
 	background-color: transparent;
 	color: #b69e72;
 	border-radius: 10px;
-	border: 2px solid #b69e72; /* Optional: Add a border to distinguish the button */
+	border: 2px solid #212121;
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s;
 
@@ -116,7 +133,7 @@ export const ButtonWithTransparentBg = styled.button`
 		background-color: #b69e72;
 		color: #000;
 	}
-`;
+`
 
 export const ButtonWithoutTransparentBg = styled.button`
 	padding: 10px;
@@ -131,4 +148,4 @@ export const ButtonWithoutTransparentBg = styled.button`
 		background-color: #b69e72;
 		color: #000;
 	}
-`;
+`

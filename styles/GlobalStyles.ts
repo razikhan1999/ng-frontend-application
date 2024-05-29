@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 	}
 
 	body {
+		font-family: ${cinzel.style.fontFamily};
 		background-color: ${({ theme }) => theme.colors.black};
 		background-image: url('/assets/background.png');
 		background-repeat: no-repeat;
@@ -36,10 +37,12 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 	button {
 		font-family: ${cinzel.style.fontFamily};
 		font-weight: ${cinzel.style.fontWeight};
+		color: ${({ theme }) => theme.colors.white};
 	}
 
 	b {
 		font-weight: 700;
+		
 	}
 
 	a{
@@ -51,8 +54,10 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 	span,
 	input,
 	textarea {
-		font-family: ${interRegular.style.fontFamily};
-		font-weight: ${interRegular.style.fontWeight};
+		color: ${({ theme }) => theme.colors.white};
+		font-family: ${cinzel.style.fontFamily};
+		font-weight: ${cinzel.style.fontWeight};
+		
 	}
 `
 

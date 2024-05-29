@@ -25,7 +25,8 @@ import {
 	questImage,
 	solidityIcon,
 	swordIcon,
-	xpIcon
+	xpIcon,
+	ButtonBlock
 } from './components'
 import { Quest } from './quest.type'
 
@@ -78,7 +79,7 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 				</Row>
 			</QuestDetails>
 			<Block>{quest.description}</Block>
-			<Block>
+			<ButtonBlock>
 				<ButtonContainer>
 					{/* @ts-ignore */}
 					<Link href={`/quests/`} passHref>
@@ -99,7 +100,7 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 						AirDrop Rewards to the Guardian
 					</ButtonWithoutTransparentBg>
 				</ButtonContainer>
-			</Block>
+			</ButtonBlock>
 		</QuestDetailContainer>
 	)
 }
