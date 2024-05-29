@@ -1,12 +1,11 @@
-import AppBar from '@/components/app-bar/AppBar';
-import { ClientProviders } from './providers';
-import StyledComponentsRegistry from './registry';
+import AppBar from '@/components/app-bar/AppBar'
+import dynamic from 'next/dynamic'
+import { ClientProviders } from './providers'
+import StyledComponentsRegistry from './registry'
 
-export default function RootLayout({
-	children
-}: {
-	children: any;
-}) {
+const MouseParticlesDynamic = dynamic(() => import('@/components/mouse-particle/CustomMouseParticle'), { ssr: false })
+
+export default function RootLayout({ children }: { children: any }) {
 	return (
 		<html lang='en'>
 			<head>
@@ -17,16 +16,22 @@ export default function RootLayout({
 
 			<body>
 				{/* @ts-ignore */}
+				<MouseParticlesDynamic
+					g={1}
+					color={['#BEA77E', '##8E8E8E', '#212121', '#7A7A7A', '#0F0F0F']}
+					cull='container,image-wrapper'
+				/>
+				{/* @ts-ignore */}
 				<StyledComponentsRegistry>
-				{/* @ts-ignore */}
+					{/* @ts-ignore */}
 					<ClientProviders>
-				{/* @ts-ignore */}
+						{/* @ts-ignore */}
 						<AppBar />
-				{/* @ts-ignore */}
+						{/* @ts-ignore */}
 						{children}
 					</ClientProviders>
 				</StyledComponentsRegistry>
 			</body>
 		</html>
-	);
+	)
 }
