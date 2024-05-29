@@ -1,40 +1,47 @@
-'use client';
-import React, { FC } from 'react';
+'use client'
+import { rewardAtom } from '@/atoms/atoms'
+import { useAtom } from 'jotai'
+import Link from 'next/link'
+import { FC } from 'react'
+import { FlexBox } from '../Flex'
 import {
-	QuestDetailContainer,
-	QuestImage,
-	questImage,
-	QuestDetails,
-	Row,
-	QuestName,
-	XPContainer,
-	xpIcon,
-	XPValue,
-	IconText,
-	CapsulesSection,
-	CapsulesIcon,
-	solidityIcon,
-	CapsulesText,
-	swordIcon,
-	GoldValue,
-	goldIcon,
 	Block,
 	ButtonContainer,
 	ButtonWithTransparentBg,
-	ButtonWithoutTransparentBg
-} from './components';
-import { FlexBox } from '../Flex';
-import { Quest } from './quest.type';
-import { useAtom } from 'jotai';
-import { rewardAtom } from '@/atoms/atoms';
-import Link from 'next/link';
+	ButtonWithoutTransparentBg,
+	CapsulesIcon,
+	CapsulesSection,
+	CapsulesText,
+	GoldValue,
+	IconText,
+	QuestDetailContainer,
+	QuestDetails,
+	QuestImage,
+	QuestName,
+	Row,
+	XPContainer,
+	XPValue,
+	goldIcon,
+	questImage,
+	solidityIcon,
+	swordIcon,
+	xpIcon
+} from './components'
+import { Quest } from './quest.type'
 
 interface IQuestDetail {
-	quest: Quest;
+	quest: Quest
 }
 
+/**
+ * Renders the details of a quest.
+ *
+ * @param {IQuestDetail} props - The props object containing the quest data.
+ * @param {Quest} props.quest - The quest object containing the quest details.
+ * @return {JSX.Element} The JSX element representing the quest details.
+ */
 const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
-	const [reward, setReward] = useAtom(rewardAtom);
+	const [reward, setReward] = useAtom(rewardAtom)
 
 	return (
 		<QuestDetailContainer>
@@ -78,12 +85,15 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 						<ButtonWithTransparentBg>Go Back</ButtonWithTransparentBg>
 					</Link>
 					<ButtonWithoutTransparentBg
+						/**
+						 * Update global jotai state
+						 */
 						onClick={() => {
 							setReward({
 								...reward,
 								xp: reward.xp + quest.rewards.expPoints,
 								gold: reward.gold + quest.rewards.gold
-							});
+							})
 						}}
 					>
 						AirDrop Rewards to the Guardian
@@ -91,7 +101,7 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 				</ButtonContainer>
 			</Block>
 		</QuestDetailContainer>
-	);
-};
+	)
+}
 
-export default QuestDetail;
+export default QuestDetail

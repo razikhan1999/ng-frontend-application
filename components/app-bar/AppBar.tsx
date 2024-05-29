@@ -19,7 +19,15 @@ const xpImage = '/assets/exp.png';
 const avatarImage = '/assets/avatar.png';
 const logoSVG = '/ng_n_g_logo.svg';
 
+/**
+ * Renders the AppBar component.
+ *
+ * @return {JSX.Element} The rendered AppBar component.
+ */
 const AppBar = () => {
+	/**
+ 	* State defined by jotai
+ 	*/
 	const [reward] = useAtom(rewardAtom);
 
 	return (
