@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
 	a{
 		color:black;
-
+		text-decoration: none;
 	}
 
 	p,

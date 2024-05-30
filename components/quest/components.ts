@@ -9,11 +9,11 @@ export const lowRankSword = '/assets/low-rank-sword.svg'
 
 export const QuestCardContainer = styled.div`
 	width: 550px;
-	cusrsor: pointer;
-	border: 1px solid #212121;
-	border-radius: 8px;
+	cursor: pointer;
+	border: 16px solid transparent;
+	border-image: url('/assets/border.png') 18 round;
 	overflow: hidden;
-	padding: 16px;
+	// padding: 16px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	&:hover {
 		border-color: #40382c;

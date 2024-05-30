@@ -4,7 +4,8 @@ export const CenterBox = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 5px;
+	gap: 8px;
+	row-gap: 8px;
 	align-items: center;
 	overflow: auto;
 	margin: 10px 0;
