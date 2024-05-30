@@ -8,12 +8,29 @@ export const solidityIcon = '/assets/solidity.svg'
 export const lowRankSword = '/assets/low-rank-sword.svg'
 
 export const QuestCardContainer = styled.div`
-	border: 16px solid transparent;
-	border-image: url('/assets/border.png') 18 round;
-	overflow: hidden;
+	position: relative;
+	padding: 16px;
 
 	&:hover {
 		cursor: url('/assets/sword.png'), auto;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border: 16px solid transparent;
+		border-image: url('/assets/border.png') 18 round;
+		pointer-events: none;
+		transition: filter 1.3s;
+	}
+
+	&:hover::after {
+		border-image: url('/assets/border.png') 18 round;
+		filter: brightness(3);
 	}
 `
 
@@ -136,6 +153,7 @@ export const ButtonWithTransparentBg = styled.button`
 	align-items: center;
 	&:hover {
 		cursor: url('/assets/sword.png'), auto;
+		filter: brightness(1.3);
 	}
 `
 
@@ -154,7 +172,15 @@ export const ButtonWithoutTransparentBg = styled.h4`
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	transition: filter 0.3s;
+	user-select: none;
+
 	&:hover {
 		cursor: url('/assets/sword.png'), auto;
+		filter: brightness(1.1);
+	}
+
+	&:active {
+		filter: brightness(0.5);
 	}
 `
