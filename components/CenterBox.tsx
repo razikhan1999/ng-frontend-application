@@ -13,18 +13,18 @@ export const CenterBox = styled.div`
 	position: relative;
 	width: fit-content;
 	height: 100%;
-	padding: 20px 12px 20px 20px;
+	padding: 12px 0;
 	background: black;
 
-	@media (max-width: 576px) {
-		/* Extra small devices (phones) */
-		padding: 0 15px;
-	}
+	// @media (max-width: 576px) {
+	// 	/* Extra small devices (phones) */
+	// 	padding: 0 15px;
+	// }
 
-	@media (min-width: 576px) {
-		/* Small devices (landscape phones) */
-		padding: 0 0;
-	}
+	// @media (min-width: 576px) {
+	// 	/* Small devices (landscape phones) */
+	// 	padding: 0 0;
+	// }
 
 	// @media (min-width: 768px) {
 	// 	/* Medium devices (tablets) */
@@ -63,5 +63,5 @@ export const QuestInnerContainer = styled.div`
 		display: none;
 	}
 
-	padding: 20px;
+	padding: 0 20px;
 `

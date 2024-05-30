@@ -4,7 +4,7 @@ export const NavbarContainer = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.5rem 1rem;
+	padding: 0 1rem;
 	color: #fff;
 `
 
@@ -14,8 +14,8 @@ export const LogoContainer = styled.div`
 `
 
 export const LogoImage = styled.img`
-	width: 100px;
-	height: 100px;
+	width: 87px;
+	height: 87px;
 `
 
 export const NavLinks = styled.ul`
