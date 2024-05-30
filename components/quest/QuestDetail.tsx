@@ -6,6 +6,7 @@ import { FC } from 'react'
 import { BorderContainer } from '../BorderContainer'
 import { FlexBox } from '../Flex'
 import QuestBorder from '../quest-border/QuestBorder'
+import DifficultyCard from './DifficultyCard'
 import {
 	Block,
 	ButtonBlock,
@@ -24,10 +25,8 @@ import {
 	XPContainer,
 	XPValue,
 	goldIcon,
-	lowRankSword,
 	questImage,
 	solidityIcon,
-	swordIcon,
 	xpIcon
 } from './components'
 import { IQuestDetail, Quest } from './quest.type'
@@ -62,14 +61,8 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 							<CapsulesText>{quest.language.label}</CapsulesText>
 						</BorderContainer>
 						{/* Display the quest difficulty using icons */}
-						<BorderContainer>
-							{Array.from({ length: quest.difficulty }).map((_, index) => (
-								<CapsulesIcon key={index} src={swordIcon} alt='Sword Icon' />
-							))}
-							{Array.from({ length: 5 - quest.difficulty }).map((_, index) => (
-								<CapsulesIcon key={index} src={lowRankSword} alt='Sword Icon' />
-							))}
-						</BorderContainer>
+						{/*@ts-ignore*/}
+						<DifficultyCard quest={quest} />
 					</IconText>
 					<FlexBox>
 						{/* Display the gold reward */}

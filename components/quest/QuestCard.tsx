@@ -1,6 +1,7 @@
 import Link from 'next/link' // Import Link from next/link
 import { FC } from 'react'
 import { BorderContainer } from '../BorderContainer'
+import DifficultyCard from './DifficultyCard'
 import {
 	CapsulesIcon,
 	CapsulesText,
@@ -14,7 +15,6 @@ import {
 	XPContainer,
 	XPValue,
 	goldIcon,
-	lowRankSword,
 	questImage,
 	swordIcon,
 	xpIcon
@@ -68,14 +68,8 @@ const QuestCard: FC<IQuestCard> = ({ quest }) => {
 								<CapsulesText>{quest.language.label}</CapsulesText>
 							</BorderContainer>
 							{/* Display the quest difficulty using icons */}
-							<BorderContainer>
-								{Array.from({ length: quest.difficulty }).map((_, index) => (
-									<CapsulesIcon key={index} src={swordIcon} alt='Sword Icon' />
-								))}
-								{Array.from({ length: 5 - quest.difficulty }).map((_, index) => (
-									<CapsulesIcon key={index} src={lowRankSword} alt='Sword Icon' />
-								))}
-							</BorderContainer>
+							{/*@ts-ignore*/}
+							<DifficultyCard quest={quest} />
 							{/* Display the quest type */}
 							<BorderContainer>
 								<CapsulesText>{quest.type.label}</CapsulesText>
