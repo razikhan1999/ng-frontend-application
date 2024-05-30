@@ -5,6 +5,7 @@ export const xpIcon = '/assets/exp.png'
 export const goldIcon = '/assets/gold.png'
 export const swordIcon = '/assets/sword.svg'
 export const solidityIcon = '/assets/solidity.svg'
+export const lowRankSword = '/assets/low-rank-sword.svg'
 
 export const QuestCardContainer = styled.div`
 	width: 550px;

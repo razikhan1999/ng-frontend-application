@@ -14,6 +14,7 @@ import {
 	XPContainer,
 	XPValue,
 	goldIcon,
+	lowRankSword,
 	questImage,
 	swordIcon,
 	xpIcon
@@ -72,7 +73,7 @@ const QuestCard: FC<IQuestCard> = ({ quest }) => {
 									<CapsulesIcon key={index} src={swordIcon} alt='Sword Icon' />
 								))}
 								{Array.from({ length: 5 - quest.difficulty }).map((_, index) => (
-									<CapsulesIcon key={index} src={'/knife.svg'} alt='Sword Icon' />
+									<CapsulesIcon key={index} src={lowRankSword} alt='Sword Icon' />
 								))}
 							</CapsulesSection>
 							{/* Display the quest type */}
