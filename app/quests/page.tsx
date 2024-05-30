@@ -1,5 +1,6 @@
 'use client'
-import { CenterBox } from '@/components/CenterBox'
+import { CenterBox, QuestInnerContainer } from '@/components/CenterBox'
+import QuestBorder from '@/components/quest-border/QuestBorder'
 import { Quest } from '@/components/quest/quest.type'
 import { useQuery } from '@tanstack/react-query'
 import QuestCard from '../../components/quest/QuestCard'
@@ -26,7 +27,11 @@ const QuestsPage = () => {
 	} = useQuery({
 		//@ts-ignore
 		queryKey: 'quests', // Unique key for the query
-		queryFn: getQuests // Function to fetch quests data
+		queryFn: async () => {
+			const data = await getQuests()
+			console.log(data, 'data')
+			return data
+		} // Function to fetch quests data
 	})
 
 	// If data is loading, display a loading message
@@ -39,9 +44,12 @@ const QuestsPage = () => {
 			{/* Container to center the quest cards */}
 			{/* @ts-ignore */}
 			<CenterBox>
+				<QuestBorder />
 				{/* Render each quest card */}
 				{/* @ts-ignore */}
-				{questData && questData.map((quest: Quest) => <QuestCard key={quest.slug} quest={quest} />)}
+				<QuestInnerContainer>
+					{questData && questData.map((quest: Quest) => <QuestCard key={quest.slug} quest={quest} />)}
+				</QuestInnerContainer>
 			</CenterBox>
 		</div>
 	)

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CenterBox = styled.div`
 	display: flex;
@@ -14,6 +14,11 @@ export const CenterBox = styled.div`
 	&::-webkit-scrollbar {
 		display: none;
 	}
+
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 20px 12px 20px 20px;
 
 	@media (max-width: 576px) {
 		/* Extra small devices (phones) */
@@ -39,4 +44,15 @@ export const CenterBox = styled.div`
 		/* Extra large devices (large desktops) */
 		padding: 0 75px;
 	}
-`;
+`
+
+export const QuestInnerContainer = styled.div`
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+	align-items: flex-start;
+`
