@@ -14,8 +14,8 @@ import {
 import { useAtom } from 'jotai';
 import { rewardAtom } from '@/atoms/atoms';
 
-const coinImage = '/assets/gold.png';
-const xpImage = '/assets/exp.png';
+const coinImage = '/assets/gold.svg';
+const xpImage = '/assets/exp.svg';
 const avatarImage = '/assets/avatar.png';
 const logoSVG = '/ng_n_g_logo.svg';
 

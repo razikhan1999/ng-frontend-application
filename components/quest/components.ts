@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const questImage = '/assets/questImage.png'
-export const xpIcon = '/assets/exp.png'
-export const goldIcon = '/assets/gold.png'
+export const xpIcon = '/assets/exp.svg'
+export const goldIcon = '/assets/gold.svg'
 export const swordIcon = '/assets/sword.svg'
 export const solidityIcon = '/assets/solidity.svg'
 export const lowRankSword = '/assets/low-rank-sword.svg'
