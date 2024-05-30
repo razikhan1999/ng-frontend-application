@@ -22,8 +22,7 @@ export const QuestCardContainer = styled.div`
 export const QuestDetailContainer = styled.div`
 	width: 800px;
 	cusrsor: pointer;
-	border: 1px solid #212121;
-	border-radius: 8px;
+
 	overflow: hidden;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	padding: 20px;

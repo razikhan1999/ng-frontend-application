@@ -1,7 +1,7 @@
 'use client'
 
 import instance from '@/app/requests/axios'
-import { CenterBox } from '@/components/CenterBox'
+import { CenterBox, MainBox } from '@/components/CenterBox'
 import QuestDetail from '@/components/quest/QuestDetail'
 //@ts-ignore
 import { useQuery } from '@tanstack/react-query'
@@ -48,14 +48,14 @@ const QuestDetailPage = () => {
 	// Render the QuestDetail component if quest data is available
 	return (
 		quest && (
-			<div>
+			<MainBox>
 				{/* Center the QuestDetail component */}
 				{/* @ts-ignore */}
 				<CenterBox>
 					{/* @ts-ignore */}
 					<QuestDetail quest={quest} />
 				</CenterBox>
-			</div>
+			</MainBox>
 		)
 	)
 }

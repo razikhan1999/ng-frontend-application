@@ -4,9 +4,14 @@ export const MainContainer = styled.div`
 	padding: 0 20px;
 `
 
+export const MainBox = styled.div`
+	display: flex;
+	justify-content: center;
+`
+
 export const CenterBox = styled.div`
 	position: relative;
-	width: 100%;
+	width: fit-content;
 	height: 100%;
 	padding: 20px 12px 20px 20px;
 	background: black;
