@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
 
 	body {
     background-color: ${({ theme }) => theme.colors.black};
-    background-image: url('assets/background.png');
+    background-image: url('/assets/background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

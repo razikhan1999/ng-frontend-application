@@ -1,5 +1,5 @@
 'use client'
-import { CenterBox, QuestInnerContainer } from '@/components/CenterBox'
+import { CenterBox, MainContainer, QuestInnerContainer } from '@/components/CenterBox'
 import QuestBorder from '@/components/quest-border/QuestBorder'
 import { Quest } from '@/components/quest/quest.type'
 import { useQuery } from '@tanstack/react-query'
@@ -40,18 +40,18 @@ const QuestsPage = () => {
 	if (isError) return <div>An error occurred</div>
 
 	return (
-		<div>
+		<MainContainer>
 			{/* Container to center the quest cards */}
 			{/* @ts-ignore */}
 			<CenterBox>
 				<QuestBorder />
-				{/* Render each quest card */}
-				{/* @ts-ignore */}
 				<QuestInnerContainer>
+					{/* Render each quest card */}
+					{/* @ts-ignore */}
 					{questData && questData.map((quest: Quest) => <QuestCard key={quest.slug} quest={quest} />)}
 				</QuestInnerContainer>
 			</CenterBox>
-		</div>
+		</MainContainer>
 	)
 }
 

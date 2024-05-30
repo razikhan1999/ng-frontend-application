@@ -8,7 +8,6 @@ export const solidityIcon = '/assets/solidity.svg'
 export const lowRankSword = '/assets/low-rank-sword.svg'
 
 export const QuestCardContainer = styled.div`
-	width: 550px;
 	cursor: pointer;
 	border: 16px solid transparent;
 	border-image: url('/assets/border.png') 18 round;
@@ -27,14 +26,17 @@ export const QuestDetailContainer = styled.div`
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 16px;
+	padding: 20px;
 	background-color: #080808;
+	position: relative;
+	margin: 0 auto;
 `
 
 export const QuestImage = styled.img`
 	width: 100%;
-	height: 150px;
+	height: 100px;
 	object-fit: cover;
+	border-radius: 10px;
 `
 
 export const QuestDetails = styled.div`

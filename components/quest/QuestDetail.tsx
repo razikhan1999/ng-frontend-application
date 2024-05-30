@@ -4,6 +4,7 @@ import { useAtom } from 'jotai'
 import Link from 'next/link'
 import { FC } from 'react'
 import { FlexBox } from '../Flex'
+import QuestBorder from '../quest-border/QuestBorder'
 import {
 	Block,
 	ButtonBlock,
@@ -43,6 +44,7 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 
 	return (
 		<QuestDetailContainer>
+			<QuestBorder />
 			{/* Display the quest image or a default image if not provided */}
 			<QuestImage src={quest.cover ?? questImage} alt='Quest Image' />
 			{/* Container for the quest details */}
