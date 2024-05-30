@@ -1,5 +1,19 @@
 # Technical Test for Frontend Developer
 
+## Tasks Implemented
+
+- Integrated quest and quests/:questSlug page
+- Integrated Airdrop Rewards functionality with Jotai
+- Used Style components for styling
+- Used use query hook with axios
+
+## Extra Features Implemented
+
+- Added hover effect on cards and button
+- Added smoke background feature
+- Added sword as an indication for any item being clickable
+- Wrote test case with playwright
+
 ## Overview
 
 The goal of this test is to evaluate your skills as a frontend developer. You will build a small Next.js application that displays a list of quests and navigates the user to the quest page upon clicking.
