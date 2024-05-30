@@ -53,6 +53,7 @@ export const XPContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 0.5rem;
+	gap: 4px;
 `
 
 export const XPValue = styled.span`
@@ -99,6 +100,10 @@ export const CapsulesIcon = styled.img`
 
 export const CapsulesText = styled.span`
 	font-weight: bold;
+	text-overflow: ellipsis;
+	max-width: 85px;
+	text-wrap: nowrap;
+	overflow: hidden;
 `
 
 export const Block = styled.div`
@@ -122,33 +127,33 @@ export const ButtonContainer = styled.div`
 `
 
 export const ButtonWithTransparentBg = styled.button`
+	width: fit-content;
+	border: 8px solid transparent;
+	border-image: url('/assets/border.png') 18 round;
+	color: #b69e72;
+	display: flex;
+	background-color: transparent;
 	height: 42px;
 	width: 160px;
-	flex-shrink: 0;
-	background-color: transparent;
-	color: #b69e72;
-	border-radius: 10px;
-	border: 2px solid #212121;
 	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
-
-	&:hover {
-		background-color: #b69e72;
-		color: #000;
-	}
+	justify-content: center;
+	align-items: center;
 `
 
-export const ButtonWithoutTransparentBg = styled.button`
-	padding: 10px;
-	background-color: #b69e72;
-	color: #000;
-	border: none;
-	border-radius: 10px;
+export const ButtonWithoutTransparentBg = styled.h4`
+	width: auto;
+	padding: 20px;
+	display: flex;
+	width: 344px;
+	height: 42px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	color: #0f0f0f;
+	align-items: center;
+	justify-content: center;
+	background-image: url('/assets/button.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
-
-	&:hover {
-		background-color: #b69e72;
-		color: #000;
-	}
 `

@@ -3,6 +3,7 @@ import { rewardAtom } from '@/atoms/atoms'
 import { useAtom } from 'jotai'
 import Link from 'next/link'
 import { FC } from 'react'
+import { BorderContainer } from '../BorderContainer'
 import { FlexBox } from '../Flex'
 import QuestBorder from '../quest-border/QuestBorder'
 import {
@@ -12,7 +13,6 @@ import {
 	ButtonWithTransparentBg,
 	ButtonWithoutTransparentBg,
 	CapsulesIcon,
-	CapsulesSection,
 	CapsulesText,
 	GoldValue,
 	IconText,
@@ -44,6 +44,7 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 
 	return (
 		<QuestDetailContainer>
+			{/*@ts-ignore*/}
 			<QuestBorder />
 			{/* Display the quest image or a default image if not provided */}
 			<QuestImage src={quest.cover ?? questImage} alt='Quest Image' />
@@ -56,19 +57,19 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 				<Row>
 					<IconText>
 						{/* Display the quest language */}
-						<CapsulesSection>
+						<BorderContainer>
 							<CapsulesIcon src={solidityIcon} alt='Solidity Icon' />
 							<CapsulesText>{quest.language.label}</CapsulesText>
-						</CapsulesSection>
+						</BorderContainer>
 						{/* Display the quest difficulty using icons */}
-						<CapsulesSection>
+						<BorderContainer>
 							{Array.from({ length: quest.difficulty }).map((_, index) => (
 								<CapsulesIcon key={index} src={swordIcon} alt='Sword Icon' />
 							))}
 							{Array.from({ length: 5 - quest.difficulty }).map((_, index) => (
 								<CapsulesIcon key={index} src={lowRankSword} alt='Sword Icon' />
 							))}
-						</CapsulesSection>
+						</BorderContainer>
 					</IconText>
 					<FlexBox>
 						{/* Display the gold reward */}

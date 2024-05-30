@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: any }) {
 			</head>
 
 			<body style={{ maxHeight: '100vh' }}>
-				{/* @ts-ignore */}
+				{/* @ts-ignore */}c
 				<MouseParticlesDynamic
 					g={1}
 					color={['#BEA77E', '##8E8E8E', '#212121', '#7A7A7A', '#0F0F0F']}

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
 	padding: 0 20px;
-	background: black;
 `
 
 export const CenterBox = styled.div`
@@ -10,6 +9,7 @@ export const CenterBox = styled.div`
 	width: 100%;
 	height: 100%;
 	padding: 20px 12px 20px 20px;
+	background: black;
 
 	@media (max-width: 576px) {
 		/* Extra small devices (phones) */
@@ -47,7 +47,7 @@ export const QuestInnerContainer = styled.div`
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 15px;
+	gap: 8px;
 	align-items: center;
 	overflow: auto;
 	margin: 10px 0;

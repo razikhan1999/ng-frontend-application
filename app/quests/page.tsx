@@ -44,6 +44,7 @@ const QuestsPage = () => {
 			{/* Container to center the quest cards */}
 			{/* @ts-ignore */}
 			<CenterBox>
+				{/* @ts-ignore */}
 				<QuestBorder />
 				<QuestInnerContainer>
 					{/* Render each quest card */}
