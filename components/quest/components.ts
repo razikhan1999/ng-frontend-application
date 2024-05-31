@@ -1,5 +1,16 @@
+import { MouseEventHandler, ReactNode } from 'react'
 import styled from 'styled-components'
+interface ImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 
+interface QuestCardContainerProps {
+	children: ReactNode
+	className?: string
+}
+
+interface ButtonWithoutTransparentBgProps {
+	children: ReactNode
+	onClick?: MouseEventHandler<HTMLHeadingElement>
+}
 export const questImage = '/assets/questImage.png'
 export const xpIcon = '/assets/exp.svg'
 export const goldIcon = '/assets/gold.svg'
@@ -7,7 +18,7 @@ export const swordIcon = '/assets/sword.svg'
 export const solidityIcon = '/assets/solidity.svg'
 export const lowRankSword = '/assets/low-rank-sword.svg'
 
-export const QuestCardContainer = styled.div`
+export const QuestCardContainer = styled.div<QuestCardContainerProps>`
 	position: relative;
 	padding: 16px;
 
@@ -45,7 +56,7 @@ export const QuestDetailContainer = styled.div`
 	margin: 0 auto;
 `
 
-export const QuestImage = styled.img`
+export const QuestImage = styled.img<ImgProps>`
 	width: 100%;
 	height: 100px;
 	object-fit: cover;
@@ -106,7 +117,7 @@ export const CapsulesSection = styled.div`
 }
 `
 
-export const CapsulesIcon = styled.img`
+export const CapsulesIcon = styled.img<ImgProps>`
 	width: 20px;
 	height: 20px;
 `
@@ -157,7 +168,7 @@ export const ButtonWithTransparentBg = styled.button`
 	}
 `
 
-export const ButtonWithoutTransparentBg = styled.h4`
+export const ButtonWithoutTransparentBg = styled.h4<ButtonWithoutTransparentBgProps>`
 	width: auto;
 	padding: 20px;
 	display: flex;

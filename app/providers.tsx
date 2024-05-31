@@ -1,18 +1,17 @@
-'use client';
+'use client'
 
-import GlobalStyles from '@/styles/GlobalStyles';
-import { darkTheme } from '@/styles/theme';
-import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister';
-import { QueryCache, QueryClient, QueryClientConfig } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import { Provider } from 'jotai';
-import { ReactNode, useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import GlobalStyles from '@/styles/GlobalStyles'
+import { darkTheme } from '@/styles/theme'
+import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister'
+import { QueryCache, QueryClient, QueryClientConfig } from '@tanstack/react-query'
+import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client'
+import { Provider } from 'jotai'
+import { useState } from 'react'
+import { ThemeProvider } from 'styled-components'
 
 export const globalQueryConfig: {
-	client: QueryClientConfig;
-	server: QueryClientConfig;
+	client: QueryClientConfig
+	server: QueryClientConfig
 } = {
 	client: {
 		defaultOptions: {
@@ -30,7 +29,7 @@ export const globalQueryConfig: {
 			}
 		}
 	}
-};
+}
 
 const persistOptions = {
 	persister: createSyncStoragePersister({
@@ -39,29 +38,25 @@ const persistOptions = {
 		throttleTime: 1000
 	}),
 	maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
-};
+}
 
 export const ClientProviders = ({ children }: { children: any }) => {
 	const [queryClient] = useState(() => {
-		const queryCache = new QueryCache();
+		const queryCache = new QueryCache()
 
 		const queryClient = new QueryClient({
 			...globalQueryConfig.client,
 			queryCache
-		});
+		})
 
-		return queryClient;
-	});
+		return queryClient
+	})
 
 	return (
 		<>
-		{/* @ts-ignore */}
 			<PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
-		{/* @ts-ignore */}
 				<Provider>
-		{/* @ts-ignore */}
 					<ThemeProvider theme={darkTheme}>
-		{/* @ts-ignore */}
 						<GlobalStyles />
 						{children}
 					</ThemeProvider>
@@ -69,5 +64,5 @@ export const ClientProviders = ({ children }: { children: any }) => {
 				</Provider>
 			</PersistQueryClientProvider>
 		</>
-	);
-};
+	)
+}

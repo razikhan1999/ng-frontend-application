@@ -16,23 +16,17 @@ export default function RootLayout({ children }: { children: any }) {
 			</head>
 
 			<body style={{ maxHeight: '100vh' }}>
-				{/* @ts-ignore */}
 				<MouseParticlesDynamic
 					g={1}
 					color={['#BEA77E', '##8E8E8E', '#212121', '#7A7A7A', '#0F0F0F']}
 					cull='container,image-wrapper'
 				/>
-				{/* @ts-ignore */}
 				<StyledComponentsRegistry>
-					{/* @ts-ignore */}
 					<ClientProviders>
-						{/* @ts-ignore */}
 						<AppBar />
-						{/* @ts-ignore */}
 						{children}
 					</ClientProviders>
 				</StyledComponentsRegistry>
-				{/* @ts-ignore */}
 				<SmokeEffect />
 			</body>
 		</html>

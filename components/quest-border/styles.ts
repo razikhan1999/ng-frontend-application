@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 const ornamentedSegment = '/assets/containers/ornamented-segment.svg'
+interface ImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 
 export const BorderContainer = styled.div`
 	position: absolute;
@@ -87,7 +88,7 @@ export const TopLeftImg = styled.div`
 	width: 32px;
 `
 
-export const TopLeftImgInner = styled.img`
+export const TopLeftImgInner = styled.img<ImgProps>`
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -109,7 +110,7 @@ export const TopRightImg = styled.div`
 	width: 32px;
 `
 
-export const TopRightImgInner = styled.img`
+export const TopRightImgInner = styled.img<ImgProps>`
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -131,7 +132,7 @@ export const BottomLeftImg = styled.div`
 	width: 32px;
 `
 
-export const BottomLeftImgInner = styled.img`
+export const BottomLeftImgInner = styled.img<ImgProps>`
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -153,7 +154,7 @@ export const BottomRightImg = styled.div`
 	width: 32px;
 `
 
-export const BottomRightImgInner = styled.img`
+export const BottomRightImgInner = styled.img<ImgProps>`
 position: absolute;
 height: 100%;
 width: 100%;

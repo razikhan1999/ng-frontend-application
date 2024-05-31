@@ -3,7 +3,7 @@
 import MouseParticles from 'react-mouse-particles'
 
 const CustomMouseParticles = (props: any) => {
-	/* @ts-ignore */
+	// @ts-ignore
 	return <MouseParticles {...props} />
 }
 

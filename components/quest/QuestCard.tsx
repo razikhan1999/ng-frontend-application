@@ -43,7 +43,6 @@ import { IQuestCard } from './quest.type'
  */
 const QuestCard: FC<IQuestCard> = ({ quest }) => {
 	return (
-		// @ts-ignore
 		<Link href={`/quests/${quest.slug}`} passHref>
 			{/* Main container for the quest card */}
 			<QuestCardContainer className='quest-card'>
@@ -68,7 +67,6 @@ const QuestCard: FC<IQuestCard> = ({ quest }) => {
 								<CapsulesText>{quest.language.label}</CapsulesText>
 							</BorderContainer>
 							{/* Display the quest difficulty using icons */}
-							{/*@ts-ignore*/}
 							<DifficultyCard quest={quest} />
 							{/* Display the quest type */}
 							<BorderContainer>

@@ -3,10 +3,8 @@
 import instance from '@/app/requests/axios'
 import { CenterBox, MainBox } from '@/components/CenterBox'
 import QuestDetail from '@/components/quest/QuestDetail'
-//@ts-ignore
-import { useQuery } from '@tanstack/react-query'
-//@ts-ignore
 import { Quest } from '@/components/quest/quest.type'
+import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'next/navigation'
 
 /**
@@ -50,9 +48,7 @@ const QuestDetailPage = () => {
 		quest && (
 			<MainBox>
 				{/* Center the QuestDetail component */}
-				{/* @ts-ignore */}
 				<CenterBox>
-					{/* @ts-ignore */}
 					<QuestDetail quest={quest} />
 				</CenterBox>
 			</MainBox>

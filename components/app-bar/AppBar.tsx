@@ -1,23 +1,22 @@
-'use client';
-import React from 'react';
+'use client'
 
+import { rewardAtom } from '@/atoms/atoms'
+import { useAtom } from 'jotai'
 import {
-	NavbarContainer,
+	AvatarImage,
+	CountText,
 	LogoContainer,
 	LogoImage,
-	NavLinks,
 	NavLink,
 	NavLinkImage,
-	CountText,
-	AvatarImage
-} from './components';
-import { useAtom } from 'jotai';
-import { rewardAtom } from '@/atoms/atoms';
+	NavLinks,
+	NavbarContainer
+} from './components'
 
-const coinImage = '/assets/gold.svg';
-const xpImage = '/assets/exp.svg';
-const avatarImage = '/assets/avatar.png';
-const logoSVG = '/ng_n_g_logo.svg';
+const coinImage = '/assets/gold.svg'
+const xpImage = '/assets/exp.svg'
+const avatarImage = '/assets/avatar.png'
+const logoSVG = '/ng_n_g_logo.svg'
 
 /**
  * Renders the AppBar component.
@@ -26,9 +25,9 @@ const logoSVG = '/ng_n_g_logo.svg';
  */
 const AppBar = () => {
 	/**
- 	* State defined by jotai
- 	*/
-	const [reward] = useAtom(rewardAtom);
+	 * State defined by jotai
+	 */
+	const [reward] = useAtom(rewardAtom)
 
 	return (
 		<NavbarContainer>
@@ -49,7 +48,7 @@ const AppBar = () => {
 				</NavLink>
 			</NavLinks>
 		</NavbarContainer>
-	);
-};
+	)
+}
 
-export default AppBar;
+export default AppBar

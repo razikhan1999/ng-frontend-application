@@ -43,7 +43,6 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 
 	return (
 		<QuestDetailContainer>
-			{/*@ts-ignore*/}
 			<QuestBorder />
 			{/* Display the quest image or a default image if not provided */}
 			<QuestImage src={quest.cover ?? questImage} alt='Quest Image' />
@@ -61,7 +60,6 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 							<CapsulesText>{quest.language.label}</CapsulesText>
 						</BorderContainer>
 						{/* Display the quest difficulty using icons */}
-						{/*@ts-ignore*/}
 						<DifficultyCard quest={quest} />
 					</IconText>
 					<FlexBox>
@@ -83,7 +81,6 @@ const QuestDetail: FC<IQuestDetail> = ({ quest }) => {
 			<ButtonBlock>
 				<ButtonContainer>
 					{/* Link to go back to the quests list */}
-					{/* @ts-ignore */}
 					<Link href={`/quests/`} passHref>
 						<ButtonWithTransparentBg>Go Back</ButtonWithTransparentBg>
 					</Link>

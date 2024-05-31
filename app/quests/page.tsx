@@ -25,8 +25,7 @@ const QuestsPage = () => {
 		isLoading, // Loading state
 		isError // Error state
 	} = useQuery({
-		//@ts-ignore
-		queryKey: 'quests', // Unique key for the query
+		queryKey: ['quests'], // Unique key for the query
 		queryFn: async () => {
 			const data = await getQuests()
 			console.log(data, 'data')
@@ -42,13 +41,10 @@ const QuestsPage = () => {
 	return (
 		<MainContainer>
 			{/* Container to center the quest cards */}
-			{/* @ts-ignore */}
 			<CenterBox>
-				{/* @ts-ignore */}
 				<QuestBorder />
 				<QuestInnerContainer>
 					{/* Render each quest card */}
-					{/* @ts-ignore */}
 					{questData && questData.map((quest: Quest) => <QuestCard key={quest.slug} quest={quest} />)}
 				</QuestInnerContainer>
 			</CenterBox>

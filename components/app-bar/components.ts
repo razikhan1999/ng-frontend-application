@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+interface ImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 
 export const NavbarContainer = styled.nav`
 	display: flex;
@@ -13,7 +14,7 @@ export const LogoContainer = styled.div`
 	align-items: center;
 `
 
-export const LogoImage = styled.img`
+export const LogoImage = styled.img<ImgProps>`
 	width: 87px;
 	height: 87px;
 `
@@ -36,12 +37,12 @@ export const NavLink = styled.li`
 	cursor: pointer;
 `
 
-export const NavLinkImage = styled.img`
+export const NavLinkImage = styled.img<ImgProps>`
 	width: 20px;
 	height: 20px;
 `
 
-export const AvatarImage = styled.img`
+export const AvatarImage = styled.img<ImgProps>`
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
