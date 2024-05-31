@@ -1,9 +1,17 @@
 'use client'
 
+import React from 'react'
 import MouseParticles from 'react-mouse-particles'
 
-const CustomMouseParticles = (props: any) => {
-	// @ts-ignore
+interface MouseParticlesProps {
+	g?: number
+	color?: string | string[]
+	cull?: string
+	level?: number
+	[key: string]: any
+}
+
+const CustomMouseParticles: React.FC<MouseParticlesProps> = (props) => {
 	return <MouseParticles {...props} />
 }
 
